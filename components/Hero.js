@@ -1,6 +1,12 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-export default function Hero(){
+const services = [
+  'Mise en place Microsoft 365, sauvegarde, NAS',
+  'Pare-feu, VLAN, Wi‑Fi pro, VPN',
+  'Optimisation SQL/serveurs, migration cloud',
+];
+
+export default function Hero() {
   return (
     <section className="section">
       <div className="container grid md:grid-cols-2 gap-10 items-center">
@@ -15,14 +21,14 @@ export default function Hero(){
             <Link href="/contact" className="btn-primary">Demander un devis</Link>
             <Link href="/services" className="btn-secondary">Voir les services</Link>
           </div>
-          <ul className="mt-8 grid gap-2 text-slate-600">
-            <li>• Mise en place Microsoft 365, sauvegarde, NAS</li>
-            <li>• Pare-feu, VLAN, Wi‑Fi pro, VPN</li>
-            <li>• Optimisation SQL/serveurs, migration cloud</li>
+          <ul className="mt-8 grid gap-2 text-slate-600" aria-label="Services proposés">
+            {services.map((s, i) => (
+              <li key={i}>• {s}</li>
+            ))}
           </ul>
         </div>
         <div className="card">
-          <h3 className="text-xl font-semibold">Prise de rendez-vous</h3>
+          <h2 className="text-xl font-semibold">Prise de rendez-vous</h2>
           <p className="text-slate-600 mt-2">Planifiez un appel découverte (15 min) pour évaluer vos besoins.</p>
           <div className="mt-4">
             <a className="btn-primary" href="#calendly">Réserver</a>
@@ -35,5 +41,5 @@ export default function Hero(){
         </div>
       </div>
     </section>
-  )
+  );
 }
