@@ -1,9 +1,18 @@
-export default function Features(){
+export default function Features() {
   const items = [
-    { title: 'Support à distance', text: 'Résolution rapide via AnyDesk/Teams. Forfaits au ticket ou banque d’heures.' },
-    { title: 'Infrastructure & Réseau', text: 'Pare-feu FortiGate, VLAN, Wi‑Fi pro, sauvegarde Veeam/NAS.' },
-    { title: 'Projets & Cloud', text: 'Microsoft 365, Azure/Intune, virtualisation, NAS Synology/QNAP.' },
-  ]
+    {
+      title: 'Support à distance',
+      text: 'Résolution rapide via AnyDesk/Teams. Forfaits au ticket ou banque d’heures.',
+    },
+    {
+      title: 'Infrastructure & Réseau',
+      text: 'Pare-feu FortiGate, VLAN, Wi‑Fi pro, sauvegarde Veeam/NAS.',
+    },
+    {
+      title: 'Projets & Cloud',
+      text: 'Microsoft 365, Azure/Intune, virtualisation, NAS Synology/QNAP.',
+    },
+  ];
   return (
     <section className="section bg-slate-50">
       <div className="container grid md:grid-cols-3 gap-6">
@@ -15,5 +24,5 @@ export default function Features(){
         ))}
       </div>
     </section>
-  )
+  );
 }
